@@ -20,7 +20,7 @@ export const SocketProvider = ({ children }: { children: ReactNode }) => {
             connected.current = false;
             console.log('🔧 Initializing socket');
             console.log('socket connected', socket?.connected, socket)
-            const newSocket = io('http://localhost:3000', {
+            const newSocket = io(import.meta.env.VITE_BASE_API_URL || 'http://localhost:3000', {
                 auth: { token },
                 autoConnect: false,
             });
