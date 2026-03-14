@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { AuthenticatedRequest } from 'middleware/auth.middleware';
-import { VenueModel } from '@models/Venue.model';
+import { AuthenticatedRequest } from '../middleware/auth.middleware';
+import { VenueModel } from '../models/Venue.model';
 
 export const getAllVenues = async (req: AuthenticatedRequest, res: Response) => {
     try{

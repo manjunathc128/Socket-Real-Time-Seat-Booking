@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { getAllMovies, getMovieById, getRecommendedMovies, getMovieFilters, getMovieShows} from '../controllers/movie.controllers';
 import { generateMovieShowsAndSeats, lockMovieSeat, getMovieShowSeats } from '../controllers/movieSeat.controllers';
-import { authenticateToken } from 'middleware/auth.middleware';
+import { authenticateToken } from '../middleware/auth.middleware';
 
 const router: Router = Router();
 

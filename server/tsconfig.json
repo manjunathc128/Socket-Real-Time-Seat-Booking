@@ -6,24 +6,10 @@
     "outDir": "./dist",
     "rootDir": "./",
     "lib": ["es2020"],
-    // "strict": true,
-    // "noImplicitAny": true,
-    // "exactOptionalPropertyTypes": true,
-    // "types": ["node"],
-    // "typeRoots": ["node_modules/@types", "./types"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    // "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@routes/*": ["./routes/*"],
-      "@controllers/*": ["./controllers/*"],
-      "@models/*": ["./models/*"],
-      
-    }
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts", "*.ts", "./types/*.d.ts"],
   "exclude": ["node_modules", "dist"]

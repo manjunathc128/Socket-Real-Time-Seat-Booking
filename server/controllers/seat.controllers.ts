@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
 
 import { SeatModel } from '../models/Seat.model';
-import { UserSessionModel } from '@models/UserSession.model';
+import { UserSessionModel } from '../models/UserSession.model';
 
 
 export const generateSeatsForEvent = async (req: Request, res: Response) => {

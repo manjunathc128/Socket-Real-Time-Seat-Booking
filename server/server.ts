@@ -5,18 +5,21 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
-import AuthRouter from '@routes/auth.routes';
-import BookingRouter from '@routes/booking.routes';
-import SeatRouter from '@routes/seat.routes';
-import EventRouter from '@routes/event.routes';
-import PaymentRouter from '@routes/payment.routes';
-import VenueRouter from '@routes/venue.routes';
+import AuthRouter from './routes/auth.routes';
+import BookingRouter from './routes/booking.routes';
+import SeatRouter from './routes/seat.routes';
+import EventRouter from './routes/event.routes';
+import PaymentRouter from './routes/payment.routes';
+import VenueRouter from './routes/venue.routes';
+import { testConnection } from './models/database';
+import { UserSessionModel } from './models/UserSession.model';
+
+
 import movieRoutes from './routes/movie.routes';
 import movieBookingRoutes from './routes/movieBooking.routes';
 import moviePaymentRoutes from './routes/moviePayment.routes';
 
-import { testConnection } from '@models/database';
-import { UserSessionModel } from './models/UserSession.model'
+
 
 import { CleanupService } from './services/cleanup.service';
 

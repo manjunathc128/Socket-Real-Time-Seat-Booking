@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { getAllVenues, getRecommendedVenues, getVenueFilters } from '@controllers/venue.controllers';
-import { authenticateToken } from 'middleware/auth.middleware';
+import { getAllVenues, getRecommendedVenues, getVenueFilters } from '../controllers/venue.controllers';
+import { authenticateToken } from '../middleware/auth.middleware';
 
 const VenueRouter: Router = Router()
 

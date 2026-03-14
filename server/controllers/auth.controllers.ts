@@ -1,7 +1,7 @@
 import  jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { Request, Response, NextFunction } from 'express';
-import {UserModel} from '@models/User.model';
+import {UserModel} from '../models/User.model';
 import { error } from 'node:console';
 
 const JWT_SECRET: string = process.env.JWT_SECRET || 'default-secret-key'
