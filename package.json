@@ -1,0 +1,23 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "A full-stack monorepo application for event and movie booking with real-time seat selection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manjunathc128/Socket-Real-Time-Seat-Booking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manjunathc128/Socket-Real-Time-Seat-Booking/issues"
+  },
+  "homepage": "https://github.com/manjunathc128/Socket-Real-Time-Seat-Booking#readme",
+  "devDependencies": {
+    "supabase": "^2.78.1"
+  }
+}
