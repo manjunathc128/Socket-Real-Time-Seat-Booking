@@ -34,12 +34,12 @@ const JWT_SECRET = process.env.JWT_SECRET || 'default-secret-key'
 const app: Application = express();
 
 app.use(cors({
-  origin: 'http://localhost:3001'
+  origin: ['https://socket-real-time-seat-booking.vercel.app', 'http://localhost:3001']
 }))
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3001',
+    origin: [ 'https://socket-real-time-seat-booking.vercel.app', 'http://localhost:3001'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
