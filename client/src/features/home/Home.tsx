@@ -26,7 +26,7 @@ const Home = () => {
     <Box bg="#F8F9FA" mih="100vh" py="xl">
       <Container size="xl">
         <CarouselSection title="Recommended Movies" items={recommendedMovies} type="movie" />
-        <CarouselSection title="Upcoming Events on Venues" items={recommendedVenues?.data?.venues} type="venue" />
+        <CarouselSection title="Upcoming Events on Venues" items={Array.isArray(recommendedVenues) ? [] : recommendedVenues?.data?.venues || []} type="venue" />
       </Container>
     </Box>
   );

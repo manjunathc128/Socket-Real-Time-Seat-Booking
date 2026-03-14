@@ -56,9 +56,8 @@ const CarouselSection = ({ title, items, type }: CarouselSectionProps) => {
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
           }}
-          sx={{ '&::-webkit-scrollbar': { display: 'none' } }}
         >
-          {items.map((item) => (
+          {items.map((item: any) => (
             <ItemCard key={item.id} item={item} type={type} />
           ))}
         </Box>
