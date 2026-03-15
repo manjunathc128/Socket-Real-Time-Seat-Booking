@@ -8,11 +8,13 @@ import { AppDispatch, RootState } from '@/redux/store';
 import { fetchEventById } from '@/redux/event/eventSlice';
 import { fetchSeatsByEventId } from '@/redux/seats/seatSlice';
 import SeatSelection from '@/features/seats/SeatSelection';
+import { useSocket } from '@/context/SocketContext';
 
 const EventDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const { event, loading } = useSelector((state: RootState) => state.event);
+  const socket = useSocket();
 
   useEffect(() => {
     (async () => {
@@ -22,6 +24,17 @@ const EventDetails = () => {
         }
     })()
   }, [id, dispatch]);
+
+  useEffect(() => {
+    if(socket?.connected && id){
+      socket.emit('joinEvent', Number(id));
+
+      return () => {
+        socket.emit('leaveEvent', Number(id))
+      }
+    }
+  }, [socket?.connected, id])
+
 
   if (loading || !event) return <Text>Loading...</Text>;
 
